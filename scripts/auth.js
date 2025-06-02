@@ -37,3 +37,15 @@ window.onclick = function(event) {
     authModal.style.display = "none";
   }
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+  const regBtn = document.getElementById("registerSubmit");
+  const errorMsg = document.getElementById("regError");
+
+  if (regBtn) {
+    regBtn.addEventListener("click", function (e) {
+      e.preventDefault(); // Prevent form submission
+      errorMsg.style.display = "block"; // Always show message
+    });
+  }
+});

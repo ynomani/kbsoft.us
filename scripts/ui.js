@@ -3,6 +3,23 @@ document.querySelector('.menu-toggle').addEventListener('click', () => {
   document.querySelector('.nav-links').classList.toggle('show');
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".nav-links a");
+  const navMenu = document.querySelector(".nav-links");
+  const menuToggle = document.querySelector(".menu-toggle");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      // Close the mobile menu
+      navMenu.classList.remove("show");
+
+      // Optional: change toggle icon (if animated)
+      if (menuToggle) menuToggle.classList.remove("active");
+    });
+  });
+});
+
+
 // Shrink navbar on scroll
 window.onscroll = function() { shrinkNavbar(); };
 
