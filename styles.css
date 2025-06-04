@@ -653,6 +653,11 @@ a {
 
 }
 
+#about .text p {
+  text-align: justify !important;
+}
+
+
 .team-grid {
   display: flex;
   justify-content: center;
